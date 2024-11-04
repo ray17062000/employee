@@ -1,0 +1,29 @@
+
+<div>
+  <ul>
+    <label> ID: </label>
+    <label > {{EmployeeData.id}} </label>
+  </ul>    
+  <ul>
+    <label>Name</label>
+    <input type="text" [(ngModel)]="EmployeeData.name"/>
+  </ul>
+  <ul>
+    <label>Location</label>
+    <select [(ngModel)]="EmployeeData.location">
+      <option *ngFor="let loc of dmService.LocList">
+        {{loc}}
+      </option>
+    </select>
+  </ul>
+  <ul>
+    <label>Mobile</label>
+    <input type="number" [(ngModel)]="EmployeeData.mobile"/>
+  </ul>
+  <ul> 
+    <button (click)="Cancel()" style="font-weight: bold; color:Black" >Cancel</button>
+    <button (click)="updateEmployee(EmployeeData)" style="font-weight: bold; color:Green;margin-left:10px;" >Update</button>
+  </ul>
+ 
+</div>
+

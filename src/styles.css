@@ -1,0 +1,9 @@
+/* Add application styles & imports to this file! */
+.leftColumn{  
+  padding-right: 10px;
+  width:200px;
+}
+.rightColumn{
+  padding-left: 10px;
+  width:200px
+}
