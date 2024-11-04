@@ -1,6 +1,7 @@
 import { Component, VERSION } from '@angular/core';
 
 import { Router } from '@angular/router';
+import { GoogleAnalyticsService } from './google-analytics.servive';
 
 @Component({
   selector: 'my-app',
@@ -9,12 +10,13 @@ import { Router } from '@angular/router';
 })
 export class AppComponent  {
   name = 'Employee Management Application';// + VERSION.major;
-  constructor(private router: Router){
+  constructor(private router: Router, private googleAnalyticsService: GoogleAnalyticsService){
     console.log('appcomponent constructer');
   }
 
   ngOnInit()
   {    
+    this.googleAnalyticsService.loadGoogleAnalytics();
   } 
 
   gotoHome()
@@ -24,5 +26,9 @@ export class AppComponent  {
   gotoAddemployee()
   {    
     this.router.navigate(['app-add-employee']);
+  }
+
+  loadTheButtonAnalytics(event: string){
+    this.googleAnalyticsService.trackEvent(event, event)
   }
 }

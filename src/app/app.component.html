@@ -1,9 +1,9 @@
 <nav>
-  <button>
+  <button (click)="loadTheButtonAnalytics('Home')"> 
   <a routerLink=''
   routerLinkActive="mystyle" [routerLinkActiveOptions] = "{exact:true}">
   Home</a></button>
-  <button style="margin-left:10px;" >
+  <button style="margin-left:10px;" (click)="loadTheButtonAnalytics('Add_Employee')">
   <a routerLink="app-add-employee"
   routerLinkActive="mystyle">
   Add Employee</a></button>
