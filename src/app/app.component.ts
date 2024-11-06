@@ -17,6 +17,7 @@ export class AppComponent  {
   ngOnInit()
   {    
     this.googleAnalyticsService.loadGoogleAnalytics();
+    this.googleAnalyticsService.setDomainProperties();
   } 
 
   gotoHome()

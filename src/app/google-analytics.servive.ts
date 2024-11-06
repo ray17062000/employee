@@ -35,7 +35,12 @@ export class GoogleAnalyticsService {
         // the label that will show up in the dashboard as the events name
         'event_label': eventName,
       })
-
       console.log("eventName", eventName);
+    }
+  
+    setDomainProperties(){
+      gtag('set', 'user_properties', {
+        email_domain: 'nihaan',
+      });
     }
 }
