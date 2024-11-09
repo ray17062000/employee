@@ -30,6 +30,7 @@ export class GoogleAnalyticsService {
   
     // Load Google Tag Manager
     const gtmScript = this.renderer.createElement('script');
+    this.renderer.setAttribute(gtmScript, 'async', '');
     const gtmScriptContent = `
       (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
       new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -40,6 +41,7 @@ export class GoogleAnalyticsService {
     this.renderer.setProperty(gtmScript, 'textContent', gtmScriptContent);
     this.renderer.appendChild(head, gtmScript);
   }
+  
   
  
   trackEvent(eventName: string, eventCategory: string) {
