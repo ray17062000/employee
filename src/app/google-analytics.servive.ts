@@ -10,8 +10,8 @@ export class GoogleAnalyticsService {
     this.renderer = rendererFactory.createRenderer(null, null);
   }
  
-  loadTrackingScripts() {
-    // Load Google Analytics
+  loadGoogleAnalytics() {
+    // Load Google Analytics script
     const gtagScript = this.renderer.createElement('script');
     this.renderer.setAttribute(gtagScript, 'src', 'https://www.googletagmanager.com/gtag/js?id=G-27603PZED1');
     this.renderer.setAttribute(gtagScript, 'async', '');
