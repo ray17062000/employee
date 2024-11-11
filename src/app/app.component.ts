@@ -1,7 +1,8 @@
-import { Component, VERSION } from '@angular/core';
+import { Component, Inject, VERSION } from '@angular/core';
 
 import { Router } from '@angular/router';
 import { GoogleAnalyticsService } from './google-analytics.servive';
+import { DataLayerService } from './dataLayaer.service';
 
 @Component({
   selector: 'my-app',
@@ -10,14 +11,14 @@ import { GoogleAnalyticsService } from './google-analytics.servive';
 })
 export class AppComponent  {
   name = 'Employee Management Application';// + VERSION.major;
-  constructor(private router: Router, private googleAnalyticsService: GoogleAnalyticsService){
+  constructor(private router: Router, private googleAnalyticsService: GoogleAnalyticsService,  @Inject(DataLayerService) private dataLayerService: DataLayerService){
     console.log('appcomponent constructer');
   }
 
   ngOnInit()
   {    
     this.googleAnalyticsService.loadGoogleAnalytics();
-    this.googleAnalyticsService.setDomainProperties();
+    this.dataLayerService.logCustomDimensionTest('email_domain', 'riya');
   } 
 
   gotoHome()

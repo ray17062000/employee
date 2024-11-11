@@ -54,9 +54,5 @@ export class GoogleAnalyticsService {
       console.log("eventName", eventName);
     }
   
-    setDomainProperties(){
-      gtag('set', 'user_properties', {
-        email_domain: 'nihaan',
-      });
-    }
+
 }
