@@ -29,7 +29,7 @@ export class DataLayerService {
   }
 
   logCustomDimensionTest(name: string, value: string) {
-    const hit = { name : value};
+    const hit = {email_domain : value};
     this.pingHome(hit);
   }
 }
