@@ -18,7 +18,7 @@ export class AppComponent  {
   ngOnInit()
   {    
     this.googleAnalyticsService.loadGoogleAnalytics();
-    this.dataLayerService.logCustomDimensionTest('email_domain', 'riya');
+    this.dataLayerService.logCustomDimensionTest('email_domain', 'riya2');
   } 
 
   gotoHome()
