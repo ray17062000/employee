@@ -42,6 +42,11 @@ export class GoogleAnalyticsService {
     this.renderer.appendChild(head, gtmScript);
   }
   
+  setDomainProperties(){
+    gtag('set', 'user_properties', {
+      email_domain: 'nihaan',
+    });
+  }
   
  
   trackEvent(eventName: string, eventCategory: string) {
