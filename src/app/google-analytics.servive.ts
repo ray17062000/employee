@@ -44,7 +44,7 @@ export class GoogleAnalyticsService {
   
   setDomainProperties(){
     gtag('set', 'user_properties', {
-      email_domain: 'nihaan',
+      email_domain: 'with_gtag',
     });
   }
   
