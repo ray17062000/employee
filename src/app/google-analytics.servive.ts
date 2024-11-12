@@ -44,7 +44,7 @@ export class GoogleAnalyticsService {
   
   setDomainProperties(){
     gtag('set', 'user_properties', {
-      email_domain: 'with_gtag',
+      email_domain: 'with_gtm',
     });
   }
   
