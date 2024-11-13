@@ -20,7 +20,7 @@
     <td>{{emp.location}}</td>
     <td>{{emp.mobile}}</td>
     <td>
-      <a routerLink (click)="editEmpDetails(emp.id)">Edit</a>
+      <a id="edit-btn" routerLink (click)="editEmpDetails(emp.id)">Edit</a>
     </td>
     <td>
       <button (click)="deleteEmpDetails(emp.id)"
