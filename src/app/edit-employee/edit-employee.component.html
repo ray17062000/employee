@@ -10,7 +10,7 @@
   </ul>
   <ul>
     <label>Location</label>
-    <select [(ngModel)]="EmployeeData.location">
+    <select id="gtm-location-dropdown" [(ngModel)]="EmployeeData.location">
       <option *ngFor="let loc of dmService.LocList">
         {{loc}}
       </option>
