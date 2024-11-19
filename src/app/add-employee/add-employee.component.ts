@@ -4,7 +4,7 @@ import { DmAppServiceService } from '../dm-app-service.service';
 import { Location} from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 
-@Component({
+  @Component({
   selector: 'app-add-employee',
   templateUrl: './add-employee.component.html',
   styleUrls: ['./add-employee.component.css']

@@ -29,3 +29,8 @@
     </td>
   </tr>
 </table>
+
+<div *ngFor="let item of applicationsList" style="padding: 20px;">
+  <button [id]="'item-' + item"> {{item}} </button>
+</div>
+
