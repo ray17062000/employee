@@ -1,6 +1,6 @@
 <div id="email-domain-variable">slb</div>
 <p style="font-weight: bold; color:Blue">
- Employees Details Screen
+  Employees Details Screen
 </p>
 
 <label> Name Search: </label>
@@ -10,9 +10,9 @@
   <thead>
     <th>ID</th>
     <th>Name</th>
-    <th>Location</th>     
+    <th>Location</th>
     <th>Mobile</th>
-    <th>Edit</th>     
+    <th>Edit</th>
     <th>Delete</th>
   </thead>
   <tr *ngFor='let emp of dmService.employees|namefilter:inputVal'>
@@ -24,13 +24,20 @@
       <a id="edit-btn" routerLink (click)="editEmpDetails(emp.id)">Edit</a>
     </td>
     <td>
-      <button (click)="deleteEmpDetails(emp.id)"
-      style="font-weight: bold; color:Red" >Delete</button>
+      <button (click)="deleteEmpDetails(emp.id)" style="font-weight: bold; color:Red">Delete</button>
     </td>
   </tr>
 </table>
 
-<div *ngFor="let item of applicationsList" style="padding: 20px;">
-  <button [id]="'item-' + item"> {{item}} </button>
+<div style="display:flex;">
+  <div *ngFor="let item of applicationsList" style="padding: 20px;">
+    <button [id]="'item-' + item"> {{item}} </button>
+  </div>
 </div>
 
+
+<div style="display:flex;">
+  <div *ngFor="let item of newList" style="padding: 20px;">
+    <button [id]="'newItem-' + item.name"> {{item.name}} </button>
+  </div>
+</div>

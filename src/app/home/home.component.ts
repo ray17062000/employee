@@ -11,6 +11,7 @@ import {Router} from '@angular/router';
 export class HomeComponent implements OnInit {  
   inputVal:string = '';
   applicationsList = ['1', '2', '3'];
+  newList = [{name: "abc"}, {name: "a b c"}, {name: "abc def"}];
   constructor(public dmService:DmAppServiceService, private router:Router){
     console.log('appcomponent constructer');    
   }
