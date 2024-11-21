@@ -39,11 +39,12 @@
 <div style="display:flex;">
   <div *ngFor="let item of applicationsList" style="padding: 20px;">
     <div class="applicationList" id="div">
-      <img id="img" class="image" (click)="myAppsLaunch(item.code)" src="{{item.url}}" alt="thumbnail">
-      <span id="span" class="appname">{{item.nameNew}}</span>
+      <img [id]="item.endPoints.length === 1 ? 'home_myapps_launch_' + item.code : 'No launch'" class="image" (click)="myAppsLaunch(item.code)" src="{{item.url}}" alt="thumbnail">
+      <span [id]="item.endPoints.length === 1 ? 'home_myapps_launch_' + item.code : 'No launch'" class="appname">{{item.nameNew}}</span>
     </div>
   </div>
 </div>
+
 
 <button onclick="window.open('https://www.example.com', '_blank')" target="_blank">Open Example in New Tab</button>
 <button onclick="window.open('https://www.example.com', '_self')" target="_self">Open Example in Same Tab</button>
