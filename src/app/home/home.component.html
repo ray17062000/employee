@@ -38,8 +38,10 @@
 
 <div style="display:flex;">
   <div *ngFor="let item of applicationsList" style="padding: 20px;">
-      <button
-      [id]="'launch_' + item.code" (click)="myAppsLaunch(item.code)"> {{item.name}} </button>
+    <div class="applicationList" id="div">
+      <img id="img" class="image" (click)="myAppsLaunch(item.code)" src="{{item.url}}" alt="thumbnail">
+      <span id="span" class="appname">{{item.nameNew}}</span>
+    </div>
   </div>
 </div>
 

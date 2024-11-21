@@ -17,7 +17,26 @@
     border: solid 1px #e6e5e5;
     padding: 10px;
 }
-            
+
+.image {
+    height: 48px;
+    border-radius: 8px;
+    margin-bottom: 5px;
+  }
+
+  .appname {
+    text-align: center;
+  }
+
+  .applicationList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &:hover {
+      background-color: #F2F3F6 !important;
+      cursor: pointer;
+    }
+  }
 /*for footer*/
 /* .tabTask tfoot
 {
