@@ -38,6 +38,10 @@
 
 <div style="display:flex;">
   <div *ngFor="let item of applicationsList" style="padding: 20px;">
-      <button [id]="'launch_' + item.code" (click)="myAppsLaunch(item.code)" target="abc"> {{item.name}} </button>
+      <button
+      [id]="'launch_' + item.code" (click)="myAppsLaunch(item.code)"> {{item.name}} </button>
   </div>
 </div>
+
+<button onclick="window.open('https://www.example.com', '_blank')" target="_blank">Open Example in New Tab</button>
+<button onclick="window.open('https://www.example.com', '_self')" target="_self">Open Example in Same Tab</button>
