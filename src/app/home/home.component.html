@@ -38,6 +38,6 @@
 
 <div style="display:flex;">
   <div *ngFor="let item of applicationsList" style="padding: 20px;">
-      <button [id]="'launch_' + item.code" (click)="myAppsLaunch(item.code)" [attr.target]="item.endPoints.length === 1 ? 'abc' : 'edf'"> {{item.name}} </button>
+      <button [id]="'launch_' + item.code" (click)="myAppsLaunch(item.code)" target="abc"> {{item.name}} </button>
   </div>
 </div>
