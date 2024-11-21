@@ -1,0 +1,23 @@
+<div class="spacing">
+  <span class="heading">Select Region to launch {{myapps.name || 'Desktop'}}</span>
+  <button color="primary" slb-icon-button id="prev-page" (click)="closeModal()">
+    X
+  </button>
+</div>
+
+<div *ngIf="myapps.endPoints; else desktop">
+  <div *ngFor="let apps of myapps.endPoints">
+    <div class="table-container spacing regions">
+      <span>{{apps.region}}</span>
+      <button [id]="'home_myapps_launch_' + myapps.name" slb-button (click)="LaunchRegion(apps.endPoint)">Launch</button>
+    </div>
+  </div>
+</div>
+<ng-template #desktop>
+  <div *ngFor="let apps of myapps">
+    <div class="table-container spacing regions">
+      <span>{{apps.region}}</span>
+      <button slb-button [id]="'launch desktop'" (click)="LaunchRegion(apps.endPoint)">Launch</button>
+    </div>
+  </div>
+</ng-template>

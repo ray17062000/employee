@@ -13,14 +13,17 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 //import {Routes,Router,RouterModule} from '@angular/router';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MyAppsLaunchComponent } from './myapps-launch/myapps-launch.component';
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, ApproutingModule, HttpClientModule,HttpClientInMemoryWebApiModule.forRoot(
+  imports: [BrowserModule, MatDialogModule, FormsModule, ApproutingModule, HttpClientModule,HttpClientInMemoryWebApiModule.forRoot(
     InMemoryDataService, { dataEncapsulation: false }
   )],
   declarations: [
     AppComponent,
     HomeComponent,
+    MyAppsLaunchComponent,
     AddEmployeeComponent,
     EditEmployeeComponent,
     HelloComponent,

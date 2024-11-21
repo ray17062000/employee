@@ -30,14 +30,14 @@
 </table>
 
 <div style="display:flex;">
-  <div *ngFor="let item of applicationsList" style="padding: 20px;">
+  <div *ngFor="let item of newList" style="padding: 20px;">
     <button [id]="'item-' + item"> {{item}} </button>
   </div>
 </div>
 
 
 <div style="display:flex;">
-  <div *ngFor="let item of newList" style="padding: 20px;">
-    <button [id]="'newItem-' + item.name"> {{item.name}} </button>
+  <div *ngFor="let item of applicationsList" style="padding: 20px;">
+      <button [id]="'launch_' + item.code" (click)="myAppsLaunch(item.code)" [id]="'newItem-' + item.name"> {{item.name}} </button>
   </div>
 </div>
