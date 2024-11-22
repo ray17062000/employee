@@ -37,6 +37,13 @@
       cursor: pointer;
     }
   }
+
+  .ex2 {
+    background-color: lightblue;
+    width: 110px;
+    height: 110px;
+    overflow: auto;
+  }
 /*for footer*/
 /* .tabTask tfoot
 {
